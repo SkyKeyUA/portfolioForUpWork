@@ -1,0 +1,112 @@
+.root {
+  position: relative;
+  box-shadow: var(--shadow-card);
+  background: var(--light-primary);
+  border: 6px solid var(--orange);
+  border-radius: 20px;
+  margin-bottom: 40px;
+}
+.image {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+}
+.layoutLink {
+  transition: all 0.3s ease 0s;
+  display: inline-block;
+  &:hover {
+    opacity: 0.6;
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+  }
+  &:active {
+    opacity: 1;
+    -webkit-transform: translateY(2px);
+    transform: translateY(2px);
+  }
+}
+.link {
+  position: absolute;
+  bottom: 3%;
+  padding: 3px;
+  background: var(--primary-black);
+  box-shadow: var(--shadow-card);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.3s ease 0s;
+  span {
+    cursor: pointer;
+    color: var(--light-primary);
+    position: relative;
+    padding: 5px;
+    display: block;
+    height: 100%;
+    border-radius: 16px;
+    background: var(--primary-black);
+    font-size: 24px;
+  }
+  &:hover {
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+  }
+  &:active {
+    -webkit-transform: translateY(2px);
+    transform: translateY(2px);
+  }
+  &::before {
+    content: '';
+    top: -125%;
+    left: -6%;
+    width: 112%;
+    height: 347%;
+    position: absolute;
+    background: conic-gradient(
+      var(--light-primary) 0%,
+      var(--primary-black) 8%,
+      var(--primary-black) 25%,
+      var(--light-primary) 45%,
+      var(--primary-black) 60%,
+      var(--primary-black) 70%,
+      var(--light-primary) 100%
+    );
+    animation: keyframe-btn 3s linear infinite;
+    animation-play-state: running;
+  }
+}
+.layout {
+  left: 10%;
+}
+.code {
+  right: 10%;
+}
+.title {
+  margin-bottom: 20px;
+  margin: 10px auto;
+}
+.text {
+  font-size: 20px;
+  line-height: 1.5;
+  margin: 0px 40px 80px;
+  span {
+    white-space: nowrap;
+    font-weight: 700;
+  }
+
+  @media (max-width: 767.98px) {
+    font-size: 18px;
+  }
+  @media (max-width: 479.98px) {
+    font-size: 16px;
+  }
+}
+.server {
+  &::before {
+    top: -152%;
+    height: 422%;
+  }
+}
+@keyframes keyframe-btn {
+  to {
+    transform: rotate(360deg);
+  }
+}
