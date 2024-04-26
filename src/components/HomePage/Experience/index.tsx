@@ -15,7 +15,6 @@ export const Experience: React.FC = () => {
           expectations.
         </div>
       </div>
-      <Feedback />
     </div>
   );
 };

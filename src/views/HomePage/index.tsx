@@ -9,6 +9,7 @@ import {
   CompletedProjectsJS,
   CurrentProjects,
   Experience,
+  Feedback,
   RecentlyCompletedProjects,
   Skills,
 } from '@components/HomePage';
@@ -18,13 +19,13 @@ import { Education } from '@components/HomePage/Education';
 export const HomePage: React.FC = () => {
   return (
     <div className={styles.container}>
-      <AboutMe />
-      <Skills />
-      <Experience />
-      <CurrentProjects />
+      <Feedback />
       <RecentlyCompletedProjects />
       <CompletedProjects />
       <CompletedProjectsJS />
+      <AboutMe />
+      <Skills />
+      <Experience />
       <Education />
     </div>
   );
